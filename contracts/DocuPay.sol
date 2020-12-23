@@ -16,12 +16,16 @@ contract DocuPay is Ownable {
     _;
   }
 
-  // Map the uploaded files
-  mapping (address => string) public files;
+  string docupayHash;
 
-  // Set the uploaded file
-  function setFile(string calldata _file) setPause external {
-    files[msg.sender] = _file;
+  // Setters
+  function setHash(string memory ipfsHash) public {
+    docupayHash = ipfsHash;
+  }
+
+  // Getters
+  function getHash() public view returns (string memory ipfsHash) {
+    return docupayHash;
   }
 
   // Restricting access was achieved using OpenZeppelin's "Ownable" contract

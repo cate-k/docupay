@@ -1,33 +1,71 @@
 import React, { Component } from "react";
-import DocuPay from "./contracts/DocuPay.json";
+import { Document, Page } from 'react-pdf';
+import web3 from "./web3";
+import ipfs from "./ipfs";
+import storehash from "./storehash";
 
 import "./styles/App.css";
 
 class App extends Component {
   state = {
-    web3: null,
-    accounts: null,
-    contract: null
+    docupayHash: null,
+    buffer: "",
+    ethAddress: "",
+  };
+   
+  captureFile = (event) => {
+    event.stopPropagation();
+    event.preventDefault();
+
+    const file = event.target.files[0];
+
+    let reader = new window.FileReader();
+    reader.readAsArrayBuffer(file);
+    reader.onloadend = () => this.convertToBuffer(reader);
   };
 
-  runExample = async () => {
-    const { accounts, contract } = this.state;
+  convertToBuffer = async (reader) => {
+    // Convert file to buffer so that it can be uploaded to IPFS
+    const buffer = await Buffer.from(reader.result);
+    this.setState({buffer});
+  };
 
-    // Stores a given value, 5 by default.
-    await contract.methods.set(5).send({ from: accounts[0] });
+  onSubmit = async (event) => {
+    event.preventDefault();
 
-    // Get the value from the contract to prove it worked.
-    const response = await contract.methods.get().call();
+    // Take the user's MetaMask address
+    const accounts = await web3.eth.getAccounts();
+    console.log("Sending from MetaMask account: " + accounts[0]);
 
-    // Update state with the result.
-    this.setState({ storageValue: response });
+    // Retrieve the contract address from storehash.js
+    const ethAddress= await storehash.options.address;
+    this.setState({ethAddress});
+
+    // Save document to IPFS, return its hash, and set it to state
+    await ipfs.add(this.state.buffer, (err, docupayHash) => {
+      console.log(err, docupayHash);
+      this.setState({ docupayHash: docupayHash[0].hash });
+    })
   };
 
   render() {
-    if (!this.state.web3) {
-      return <div>Loading Web3, accounts, and contract...</div>;
-    }
-    return <div className="app"></div>;
+    return (
+      <div className="app">
+        <h3> Choose file to send to IPFS </h3>
+        <form onSubmit={this.onSubmit}>
+          <input type="file" onChange={this.captureFile} />
+          <button type="submit">Submit</button>
+        </form>
+
+        <Document src={`https://ipfs.infura.io/ipfs/${this.state.docupayHash}`}>
+          <Page pageNumber={1} />
+        </Document>
+
+        <a href={`https://ipfs.infura.io/ipfs/${this.state.docupayHash}`}>Click to download the file</a>
+
+        <p>IPFS Hash: {this.state.docupayHash}</p>
+      </div>
+    );
   }
 }
 
