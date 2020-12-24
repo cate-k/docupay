@@ -1,0 +1,31 @@
+.header {
+  background-color: var(--color-black);
+  padding-bottom: 5%;
+}
+
+.logo {
+  float: left;
+  height: 5%;
+  width: 5%;
+  padding: 18px;
+  margin-left: 20%;
+}
+
+.header-text {
+  display: block;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.address {
+  color: var(--color-white);
+  font-family: "Inconsolata";
+  font-size: 25px;
+  margin-left: 35%;
+  position: absolute;
+  top: 4%;
+}
+
+.form-input {
+  margin-bottom: 20px;
+}

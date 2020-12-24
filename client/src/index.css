@@ -10,10 +10,11 @@
 }
 
 /* General */
-* {
+*, .input-file {
   margin: 0;
   padding: 0;
   border: 0;
+  outline: 0;
   box-sizing: border-box;
 }
 
@@ -21,6 +22,47 @@ body {
   font-family: "Montserrat";
 }
 
-h2, h3 {
+.heading {
   font-family: "Inconsolata";
+  font-size: 25px;
+  width: 51%;
+  margin-top: 2%;
+}
+
+.text-wrapper {
+  text-align: center;
+}
+
+form, p {
+  display: inline-block;
+  text-align: left;
+  width: 51%;
+  margin-top: 5px;
+}
+
+button {
+  font-family: "Montserrat";
+  border: 1px solid var(--color-black);
+  border-radius: 5px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  text-align: center;
+  width: 10%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+input {
+  border-bottom: 1px solid var(--color-black);
+  font-family: "Montserrat";
+  height: 40px;
+  width: 500px;
+}
+
+/* Colours */
+:root {
+  --color-white: #ffffff;
+  --color-persimmon: #ff5c5c;
+  --color-persimmon-transparent: #ff5c5ca2;
+  --color-black: #000000;
 }
