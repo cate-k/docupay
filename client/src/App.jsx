@@ -17,7 +17,13 @@ class App extends Component {
       account: null
     };
   }
+  
+  async componentWillMount() {
+    await this.loadWeb3();
+    await this.loadBlockchain();
+  }
 
+  // Detect web3 on the user's browser
   async loadWeb3() {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum);
@@ -31,12 +37,15 @@ class App extends Component {
 
   async loadBlockchain() {
     const web3 = window.web3;
+
+    // Retrieve the user's MetaMask account address
     const accounts = await web3.eth.getAccounts();
     this.setState({ account: accounts[0] });
 
     const networkId = await web3.eth.net.getId();
     const networkData = DocuPay.networks[networkId];
 
+    // Create a new contract instance
     if (networkData) {
       const contract = new web3.eth.Contract(DocuPay.abi, networkData.address);
       this.setState({ contract });
@@ -63,11 +72,7 @@ class App extends Component {
     }
   }
 
-  async componentWillMount() {
-    await this.loadWeb3();
-    await this.loadBlockchain();
-  }
-   
+  // Capture and read file when user uploads it
   captureFile = (event) => {
     event.stopPropagation();
     event.preventDefault();
@@ -90,7 +95,7 @@ class App extends Component {
 
     // Take the user's MetaMask address
     const accounts = await web3.eth.getAccounts();
-    console.log("Sending file to IPFS from MetaMask account: " + accounts[0]);
+    alert("Please wait a few moments while your file is being sent to IPFS from MetaMask account: " + accounts[0]);
 
     // To use the contract's methods
     this.DocuPay = new web3.eth.Contract(DocuPay.abi, DocuPay.address);
@@ -102,8 +107,9 @@ class App extends Component {
     
     // Save document to IPFS, return its hash, and set it to state
     await ipfs.add(this.state.buffer, (err, docupayHash) => {
-      console.log("IPFS File",err, docupayHash);
       this.setState({ docupayHash: docupayHash[0].hash });
+      console.log("IPFS File", err, docupayHash);
+      alert("Your file has been successfully uploaded to IPFS! You can now view your file using the button below.");
     });
   };
 
@@ -121,6 +127,7 @@ class App extends Component {
 
         <div className="text-wrapper">
           <p className="heading">Publish a Document</p>
+
           <form onSubmit={this.onSubmit}>
             <p>Title</p>
             <input type="text" id="title" className="form-input" placeholder="Write title..." />
@@ -132,17 +139,18 @@ class App extends Component {
             <input type="text" id="description" className="form-input" placeholder="Write description..." />
             <br />
             <p>Choose a PDF document to upload</p>
+            <br />
             <input type="file" onChange={this.captureFile} className="input-file" />
+            <br />
 
-            <button type="submit">Publish</button>
+            <p>
+              <button type="submit">Publish</button>
+            </p>
           </form>
-        </div>
 
-        <div className="text-wrapper">
-          <p className="heading">Feed</p>
+          <a href={`https://ipfs.infura.io/ipfs/${this.state.docupayHash}`} className="link-button" target="_blank" rel="noopener noreferrer">View your file</a>
         </div>
       </div>
-      // <a href={`https://ipfs.infura.io/ipfs/${this.state.docupayHash}`}>Click to download the file</a>
     );
   }
 }

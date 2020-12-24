@@ -16,6 +16,7 @@
   border: 0;
   outline: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -40,29 +41,39 @@ form, p {
   margin-top: 5px;
 }
 
-button {
+button, .link-button {
   font-family: "Montserrat";
-  border: 1px solid var(--color-black);
+  font-size: 15px;
+  border: 1px solid black;
   border-radius: 5px;
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: black;
+  color: white;
   text-align: center;
-  width: 10%;
+  width: 42%;
+  margin-top: 20px;
   padding: 10px;
   cursor: pointer;
 }
 
-input {
-  border-bottom: 1px solid var(--color-black);
-  font-family: "Montserrat";
-  height: 40px;
-  width: 500px;
+.link-button {
+  display: block;
+  width: 11%;
+  margin-top: 20px;
+  margin-left: 24.5%;
 }
 
-/* Colours */
-:root {
-  --color-white: #ffffff;
-  --color-persimmon: #ff5c5c;
-  --color-persimmon-transparent: #ff5c5ca2;
-  --color-black: #000000;
+.link-button a {
+  color: white;
+}
+
+.form-input {
+  border-bottom: 1px solid black;
+  font-family: "Montserrat";
+  font-size: 15px;
+  height: 40px;
+  width: 1000px;
+}
+
+.input-file {
+  margin-top: 10px;
 }
