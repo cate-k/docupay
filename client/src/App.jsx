@@ -138,7 +138,7 @@ class App extends Component {
             <p>Description</p>
             <input type="text" id="description" className="form-input" placeholder="Write description..." />
             <br />
-            <p>Choose a PDF document to upload</p>
+            <p>Choose a file to upload</p>
             <br />
             <input type="file" onChange={this.captureFile} className="input-file" />
             <br />

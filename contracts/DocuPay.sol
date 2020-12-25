@@ -46,6 +46,10 @@ contract DocuPay is Ownable {
   }
 
   // Getters
+  function getOwner(address owner) public view {
+    owner = msg.sender;
+  }
+
   function getHash() public view returns (string memory ipfsHash) {
     return docupayHash;
   }
