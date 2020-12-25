@@ -15,12 +15,14 @@ It uses IPFS, or the Inter Planetary File System, to upload the files and is dep
 ##
 
 ### Setting Up
-**Step #1:** 
+*Note:* This guide assumes that you are on a Windows machine and have `ganache-cli` and `truffle` installed.
 
-**Step #2:** 
+**Step #1:** Navigate to the [repository page](https://github.com/cate-k/docupay) and click on the green button labelled *Code*. Check that you are on the *HTTPS* tab and click the clipboard icon to copy the link.
 
-**Step #3:** 
+**Step #2:** Open up the command prompt and type in `git clone https://github.com/cate-k/docupay.git`
 
-**Step #4:** 
+**Step #3:** Once the project has finished cloning, change into the project's directory.
 
-**Step #5:** 
+**Step #4:** Change into the `client` directory and enter `npm i react-scripts --save`.
+
+**Step #5:** Finally, run `npm run start` to open up `localhost`. If it doesn't open in your browser automatically, simply type in `localhost:3000` in the address bar.
