@@ -15,7 +15,7 @@ It uses IPFS, or the Inter Planetary File System, to upload the files and is dep
 ##
 
 ### Setting Up
-*Note:* This guide assumes that you are on a Windows machine and have `ganache-cli` and `truffle` installed.
+*Note:* This guide assumes that you are on a Windows machine.
 
 **Step #1:** Navigate to the [repository page](https://github.com/cate-k/docupay) and click on the green button labelled *Code*. Check that you are on the *HTTPS* tab and click the clipboard icon to copy the link.
 
