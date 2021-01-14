@@ -113,6 +113,28 @@ class App extends Component {
     });
   };
 
+  donate = async () => {
+    // Send funds to my address
+    const donationAddress = "0x31AD83536f0fD14ed34438EBbaFD7a95CF346686";
+
+    const accounts = await web3.eth.getAccounts();
+    this.setState({ account: accounts[0] });
+
+    web3.eth.sendTransaction({
+      to: donationAddress,
+      from: accounts[0],
+      value: web3.utils.toWei("1", "wei")
+    }, (err, transactionId) => {
+      if (err) {
+        console.log("Donation failed", err);
+        alert("Donation failed.");
+      } else {
+        console.log("Donation successful", transactionId);
+        alert("Donation successful! Thank you for donating.");
+      }
+    })
+  }
+
   render() {
     return (
       <div>
@@ -149,6 +171,9 @@ class App extends Component {
           </form>
 
           <a href={`https://ipfs.infura.io/ipfs/${this.state.docupayHash}`} className="link-button" target="_blank" rel="noopener noreferrer">View your file</a>
+
+          <p className="heading">Donate</p>
+          <button className="link-button" onClick={this.donate}>Donate 1 wei</button>
         </div>
       </div>
     );
