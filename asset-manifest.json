@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/docupay/static/css/main.ca7a49ec.css",
+    "main.js": "/docupay/static/js/main.de01da6a.js",
+    "static/media/metamask.png": "/docupay/static/media/metamask.824788ab60d8c8f361bf.png",
+    "static/media/glacial-indifference-bold.ttf": "/docupay/static/media/glacial-indifference-bold.7783b1a62ee28f74a3e6.ttf",
+    "static/media/logo.png": "/docupay/static/media/logo.cb2910a43a3241584dc6.png",
+    "index.html": "/docupay/index.html",
+    "main.ca7a49ec.css.map": "/docupay/static/css/main.ca7a49ec.css.map",
+    "main.de01da6a.js.map": "/docupay/static/js/main.de01da6a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca7a49ec.css",
+    "static/js/main.de01da6a.js"
+  ]
+}
