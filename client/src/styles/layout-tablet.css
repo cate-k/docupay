@@ -186,4 +186,76 @@
   #displayName {
     font-size: 1.8rem;
   }
+
+  /* Document */
+  .document .left-col {
+    margin-top: 5%;
+  }
+
+  .document .left-col .document-icon {
+    height: 2.2rem;
+    width: 2.2rem;
+  }
+
+  .document .right-col h1 {
+    margin-top: 6%;
+    margin-bottom: -2%;
+  }
+
+  .document .date {
+    font-size: 1.5rem;
+  }
+
+  .document .heading {
+    margin-top: 10%;
+  }
+
+  .document .heading .icon {
+    height: 5%;
+    width: 5%;
+    margin-bottom: -1%;
+  }
+
+  .document .message {
+    font-size: 1.8rem;
+    width: 70%;
+  }
+
+  /* Comment */
+  .commenter {
+    margin-top: 8%;
+  }
+
+  .commenter .comment-avatar {
+    margin-right: 3%;
+  }
+
+  .commenter p {
+    margin-top: 0;
+  }
+
+  .commentMsg {
+    margin-top: -2%;
+  }
+
+  .purchased-document-status p {
+    font-size: 1.5rem;
+    margin-left: 1%;
+  }
+
+  .comment .info-icon {
+    height: 5%;
+    width: 5%;
+  }
+
+  .comment .comment-buttons p {
+    margin-top: -0.5%;
+    margin-right: 8%;
+  }
+
+  .comment .like,
+  .comment .delete-icon {
+    height: 5%;
+    width: 5%;
+  }
 }
