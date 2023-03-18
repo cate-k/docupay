@@ -70,4 +70,45 @@
     margin-bottom: 3%;
     padding: 0.8%;
   }
+
+  /* Feed */
+  .feed-item .left-col {
+    margin-top: 12%;
+    margin-left: 5%;
+  }
+
+  .feed-item .right-col p {
+    margin-top: 0;
+    margin-bottom: 3%;
+  }
+
+  .feed-icon.star {
+    height: 35%;
+    width: 35%;
+    margin-top: 30%;
+  }
+
+  .feed-avatar {
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: -2%;
+  }
+
+  .date {
+    font-size: 1.5rem;
+  }
+
+  .view-btn {
+    font-size: 1.7rem;
+    padding: 3%;
+  }
+
+  .btn-icon {
+    height: 8%;
+    width: 8%;
+  }
+
+  .feed-divider {
+    margin-top: 5%;
+  }
 }

@@ -210,3 +210,93 @@ p {
   padding: 1rem;
   cursor: pointer;
 }
+
+/* Feed */
+.feed-items {
+  margin: auto;
+  width: 95%;
+}
+
+.feed-item {
+  display: flex;
+}
+
+.feed-item .left-col {
+  text-align: center;
+  flex: 10%;
+  margin-top: 15%;
+}
+
+.feed-item .left-col p {
+  margin: 0;
+}
+
+.feed-item .right-col {
+  width: 80%;
+}
+
+.feed-item .right-col h1 {
+  margin-bottom: 1%;
+}
+
+.feed-item .right-col p {
+  margin-top: 1%;
+  margin-bottom: 8%;
+}
+
+.feed-item .text-preview {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.feed-icon.star {
+  margin-top: 50%;
+  cursor: pointer;
+}
+
+.starred {
+  color: var(--colour-koromiko);
+}
+
+.feed-avatar {
+  border: 1px solid var(--colour-silver);
+  border-radius: 25px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: -5%;
+}
+
+.date {
+  font-size: 1.2rem;
+}
+
+.date span {
+  font-weight: bold;
+}
+
+.view-btn {
+  font-family: "Assistant";
+  font-size: 1.2rem;
+  background-color: var(--colour-mandarin);
+  border-radius: 5px;
+  color: var(--colour-white);
+  width: 80%;
+  padding: 5%;
+  cursor: pointer;
+}
+
+.btn-icon {
+  margin-right: 5%;
+  margin-bottom: -2.5%;
+}
+
+.btn-icon.hidden {
+  display: none;
+}
+
+.feed-divider {
+  width: 85%;
+  margin-top: 10%;
+}

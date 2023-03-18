@@ -85,4 +85,43 @@
   .upload-btn {
     width: 30%;
   }
+
+  /* Feed */
+  .feed-item .left-col {
+    margin-top: 5%;
+    margin-right: -7%;
+  }
+
+  .feed-item .right-col p {
+    margin-bottom: 2%;
+  }
+
+  .feed-icon.star {
+    height: 15%;
+    width: 15%;
+    margin-top: 8%;
+  }
+
+  .feed-avatar {
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: -1%;
+  }
+
+  .view-btn {
+    font-size: 1.5rem;
+    padding: 1.2%;
+  }
+
+  .btn-icon {
+    height: 3%;
+    width: 3%;
+    margin-right: 1.5%;
+    margin-bottom: -1%;
+  }
+
+  .feed-divider {
+    width: 70%;
+    margin-top: 3%;
+  }
 }
