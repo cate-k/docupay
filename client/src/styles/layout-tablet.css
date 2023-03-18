@@ -126,4 +126,64 @@
   .library .heading.last {
     margin-top: 8%;
   }
+
+  /* Profile */
+  .profile-info {
+    display: flex;
+  }
+
+  .profile-info .avatar {
+    margin-left: 2.5%;
+  }
+
+  .profile-text {
+    flex: 80%;
+    margin-left: 2.5%;
+  }
+
+  .profile .address {
+    font-size: 1.4rem;
+    text-align: left;
+    margin-top: 8%;
+  }
+
+  .profile .display-name {
+    text-align: left;
+  }
+
+  .profile .reputation .icon {
+    height: 6%;
+    width: 6%;
+    margin-bottom: -1.5%;
+  }
+
+  .profile .reputation {
+    text-align: left;
+    margin-left: -1%;
+  }
+
+  .profile .heading .icon {
+    height: 5%;
+    width: 5%;
+  }
+
+  .profile .heading {
+    font-size: 2.2rem;
+    margin-top: 5%;
+    margin-left: 4%;
+  }
+
+  .uploader-name {
+    display: block;
+  }
+
+  .uploader-name .edit-icon {
+    height: 6%;
+    width: 6%;
+    margin-bottom: -1%;
+  }
+
+  #displayName {
+    font-size: 1.8rem;
+  }
 }

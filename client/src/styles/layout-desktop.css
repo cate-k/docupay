@@ -142,4 +142,46 @@
   .library .heading.last {
     margin-top: 5%;
   }
+
+  /* Profile */
+  .profile-info {
+    margin-left: 22%;
+  }
+
+  .profile-info .address {
+    font-size: 2rem;
+  }
+
+  .profile .reputation .icon {
+    height: 3%;
+    width: 3%;
+    margin-right: 0.5%;
+    margin-bottom: -1%;
+  }
+
+  .profile .reputation {
+    margin-top: -1%;
+    margin-left: -0.5%;
+  }
+
+  .profile .heading .icon {
+    height: 2%;
+    width: 2%;
+    margin-right: 0.6%;
+    margin-bottom: -0.3%;
+  }
+
+  .profile .heading {
+    font-size: 2.5rem;
+    margin-top: 2%;
+    margin-left: 16%;
+    margin-bottom: 1%;
+  }
+
+  .uploader-name .edit-icon {
+    height: 2%;
+    width: 2%;
+    margin-left: 1%;
+    margin-bottom: -0.2%;
+  }
 }
