@@ -1,0 +1,49 @@
+@media (min-width: 768px) {
+  /* General */
+  p {
+    font-size: 1.8rem;
+  }
+
+  /* Navigation */
+  .nav-header {
+    padding: 2%;
+  }
+
+  .logo {
+    height: 12%;
+    width: 12%;
+    margin-left: 2%;
+    margin-right: 35%;
+  }
+
+  .link {
+    height: 7%;
+    width: 7%;
+  }
+
+  /* Home */
+  .header {
+    padding: 3%;
+  }
+
+  .docupay-logo {
+    margin-left: 2%;
+    margin-right: 50%;
+  }
+
+  .home-row {
+    display: flex;
+  }
+
+  .home-col-left {
+    height: 20%;
+    width: 20%;
+    margin-top: 10%;
+    flex: 50%;
+  }
+
+  .home-col-right {
+    margin-top: 5%;
+    margin-right: 4%;
+  }
+}
