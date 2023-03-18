@@ -46,4 +46,43 @@
     font-size: 1.8rem;
     margin-top: 10%;
   }
+
+  /* Upload */
+  .upload {
+    margin-left: 25%;
+  }
+
+  .upload .heading {
+    margin-top: 2%;
+  }
+
+  .upload .heading .icon {
+    height: 3%;
+    width: 3%;
+  }
+
+  .upload .heading h1 {
+    margin-top: 0;
+    margin-left: 1%;
+  }
+
+  .upload-heading {
+    margin-bottom: 0;
+  }
+
+  .upload-field {
+    width: 60%;
+  }
+
+  #fee {
+    width: 30%;
+  }
+
+  .upload-field.file {
+    margin-left: 2.3%;
+  }
+
+  .upload-btn {
+    width: 30%;
+  }
 }
