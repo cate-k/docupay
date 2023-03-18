@@ -300,3 +300,22 @@ p {
   width: 85%;
   margin-top: 10%;
 }
+
+/* Library */
+.library .heading {
+  font-family: "Glacial Indifference Bold";
+  font-size: 1.8rem;
+  display: flex;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-bottom: 0;
+}
+
+.library .heading .icon {
+  margin-top: 1.5%;
+  margin-right: 2%;
+}
+
+.library .heading.last {
+  margin-top: 10%;
+}

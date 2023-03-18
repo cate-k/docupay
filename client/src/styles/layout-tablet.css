@@ -111,4 +111,19 @@
   .feed-divider {
     margin-top: 5%;
   }
+
+  /* Library */
+  .library .heading {
+    font-size: 2.5rem;
+  }
+
+  .library .heading .icon {
+    height: 5%;
+    width: 5%;
+    margin-top: 1%;
+  }
+
+  .library .heading.last {
+    margin-top: 8%;
+  }
 }
