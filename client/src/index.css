@@ -1,0 +1,59 @@
+@import url("styles/layout-mobile");
+@import url("styles/layout-tablet");
+@import url("styles/layout-desktop");
+
+/* Fonts */
+@import url("styles/fonts/assistant");
+
+@font-face {
+  font-family: "Glacial Indifference Bold";
+  src: url("./styles/fonts/glacial-indifference-bold.ttf") format("truetype");
+}
+
+/* Colours */
+:root {
+  --colour-cod-grey: #1a1a1a;
+  --colour-space-cadet: #2d3142;
+  --colour-independence: #4f5d75;
+  --colour-mandarin: #ef8354;
+  --colour-apricot: #ec9d7a;
+  --colour-koromiko: #ffbd59;
+  --colour-silver: #bfc0c0;
+  --colour-scorpion: #635f5f;
+  --colour-white: #ffffff;
+}
+
+/* General settings */
+#root {
+  height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Assistant";
+}
+
+h1, h2, h3 {
+  font-family: "Glacial Indifference Bold";
+}
+
+p {
+  font-family: "Assistant";
+}
+
+a {
+  color: var(--colour-mandarin);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--colour-apricot);
+  transition: 0.3s;
+}
+
+button {
+  border: 0 var(--colour-white);
+}
